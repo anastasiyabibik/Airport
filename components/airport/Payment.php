@@ -1,6 +1,6 @@
 <?php
 
-namespace uCoz\model;
+namespace app\components\airport;
 
 class Payment
 {

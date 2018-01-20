@@ -1,6 +1,6 @@
 <?php
 
-namespace uCoz\model;
+namespace app\components\airport;
 
 class Tax
 {
@@ -24,6 +24,11 @@ class Tax
             default:
                 break;
         }
+
+        if (($paySumm - $tax) > 5000) {
+            $tax = $tax/2;
+        }
+
         return $tax;
     }
 

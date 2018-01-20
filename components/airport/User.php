@@ -1,6 +1,6 @@
 <?php
 
-namespace uCoz\model;
+namespace app\components\airport;
 
 class User
 {
@@ -27,8 +27,12 @@ class User
     public function buyPro()
     {
         $proPayment = new Payment(Payment::PRO_PRICE, $this);
-        $this->balance = $proPayment->getPaySumm();
+        $this->balance = $this->balance - $proPayment->getPaySumm();
         $this->isPro = true;
     }
 
+    public function showBalanceUser()
+    {
+        return $this->balance;
+    }
 }
